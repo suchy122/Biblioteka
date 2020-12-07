@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cfg.GUIController">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #89c1e0;" tabClosingPolicy="UNAVAILABLE" tabMinHeight="40.0" tabMinWidth="234.0">
+        <tabs>
+          <Tab text="Autor">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="552.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0" tabMinWidth="316.0">
+                          <tabs>
+                            <Tab text="Wyswietl">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="475.0" prefWidth="1000.0">
+                                       <children>
+                                          <TableView fx:id="tab1" prefHeight="517.0" prefWidth="1000.0" style="-fx-background-color: #89c1e0;">
+                                            <columns>
+                                              <TableColumn fx:id="aId" prefWidth="166.0" text="Id autora" />
+                                                <TableColumn fx:id="aImie" prefWidth="166.0" text="Imie" />
+                                              <TableColumn fx:id="aNazwisko" minWidth="1.0" prefWidth="199.0" text="Nazwisko" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Dodaj">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="getAImie" layoutX="65.0" layoutY="73.0" />
+                                          <Text layoutX="64.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imie:" wrappingWidth="151.13671875" />
+                                          <Text layoutX="64.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko:" wrappingWidth="188.13671875" />
+                                          <TextField fx:id="getANazwisko" layoutX="64.0" layoutY="129.0" />
+                                          <Button fx:id="addA" layoutX="64.0" layoutY="173.0" mnemonicParsing="false" onAction="#addA" text="Dodaj" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="Usuń">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="delA" layoutX="66.0" layoutY="113.0" mnemonicParsing="false" onAction="#delA" text="Usuń" />
+                                          <Text layoutX="66.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz autora do usunięcia" />
+                                          <ComboBox fx:id="choiceDelA" layoutX="66.0" layoutY="57.0" prefWidth="150.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Ksiazka">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="555.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0" tabMinWidth="316.0">
+                           <tabs>
+                              <Tab text="Wyswietl">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tab2" prefHeight="543.0" prefWidth="1000.0" style="-fx-background-color: #89c1e0;">
+                                             <columns>
+                                                <TableColumn fx:id="kId" prefWidth="200.0" text="Id ksiazki" />
+                                                <TableColumn fx:id="kNazwa" prefWidth="200.0" text="Nazwa ksiazki" />
+                                                <TableColumn fx:id="kRok" prefWidth="200.0" text="Rok wydania" />
+                                                <TableColumn fx:id="aImie1" prefWidth="200.0" text="Imie autora" />
+                                                <TableColumn fx:id="aNazwisko1" prefWidth="198.0" text="Nazwisko autora" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Dodaj">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="addK" layoutX="66.0" layoutY="204.0" mnemonicParsing="false" onAction="#addK" text="Dodaj" />
+                                          <Text layoutX="66.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwa" />
+                                          <Text layoutX="66.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="rokWydania" />
+                                          <Text layoutX="69.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor" />
+                                          <TextField fx:id="getKNazwa" layoutX="66.0" layoutY="58.0" />
+                                          <TextField fx:id="getKRok" layoutX="66.0" layoutY="110.0" />
+                                          <ComboBox fx:id="choiceGetA" layoutX="66.0" layoutY="165.0" prefWidth="150.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Usuń">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="delK" layoutX="66.0" layoutY="113.0" mnemonicParsing="false" onAction="#delK" text="Usuń" />
+                                          <Text layoutX="66.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz ksiązkę do usunięcia" />
+                                          <ComboBox fx:id="choiceDelK" layoutX="66.0" layoutY="57.0" prefWidth="150.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Czytelnik">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="554.0" prefWidth="1000.0" style="-fx-background-color: #89c1e0;" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0" tabMinWidth="316.0">
+                           <tabs>
+                              <Tab text="Wyswietl">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tab3" prefHeight="549.0" prefWidth="1000.0" style="-fx-background-color: #89c1e0;">
+                                             <columns>
+                                                <TableColumn fx:id="cId" prefWidth="200.0" text="Id czytelnika" />
+                                                <TableColumn fx:id="cImie" prefWidth="200.0" text="Imie" />
+                                                <TableColumn fx:id="cNazwisko" prefWidth="200.0" text="Nazwisko" />
+                                                <TableColumn fx:id="cMiasto" prefWidth="200.0" text="Miasto" />
+                                                <TableColumn fx:id="cPesel" prefWidth="200.0" text="Pesel" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Dodaj">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="60.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imie:" />
+                                          <TextField fx:id="getCImie" layoutX="60.0" layoutY="69.0" />
+                                          <Text layoutX="59.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko:" />
+                                          <TextField fx:id="getCNazwisko" layoutX="57.0" layoutY="122.0" />
+                                          <Text layoutX="57.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Miasto:" />
+                                          <TextField fx:id="getCMiasto" layoutX="57.0" layoutY="180.0" />
+                                          <Text layoutX="58.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pesel:" />
+                                          <TextField fx:id="getCPesel" layoutX="57.0" layoutY="238.0" />
+                                          <Button fx:id="addC" layoutX="52.0" layoutY="289.0" mnemonicParsing="false" onAction="#addC" text="Dodaj" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Usuń">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="delC" layoutX="66.0" layoutY="113.0" mnemonicParsing="false" onAction="#delC" text="Usuń" />
+                                          <Text layoutX="66.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz czytelnika do usunięcia" />
+                                          <ComboBox fx:id="choiceDelC" layoutX="66.0" layoutY="57.0" prefWidth="150.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Wypozyczenia">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="552.0" prefWidth="1000.0" style="-fx-background-color: #89c1e0;" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0" tabMinWidth="316.0">
+                           <tabs>
+                              <Tab text="Wyswietl">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tab4" prefHeight="549.0" prefWidth="1000.0" style="-fx-background-color: #89c1e0;">
+                                             <columns>
+                                                <TableColumn fx:id="wId" prefWidth="115.0" text="Id wypożyczenia" />
+                                                <TableColumn fx:id="wIdC" prefWidth="312.0" text="Imie i nazwisko czytelnika" />
+                                                <TableColumn fx:id="wIdK" prefWidth="297.0" text="Nazwa wypozyczonej książki" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Dodaj">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="60.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz czytelnika" />
+                                          <Button fx:id="addW" layoutX="60.0" layoutY="161.0" mnemonicParsing="false" onAction="#addW" text="Dodaj" />
+                                          <Text layoutX="60.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz książkę" />
+                                          <ComboBox fx:id="choiceGetK" layoutX="60.0" layoutY="118.0" prefWidth="150.0" />
+                                          <ComboBox fx:id="choiceGetC" layoutX="60.0" layoutY="68.0" prefWidth="150.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Usuń">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="delW" layoutX="66.0" layoutY="113.0" mnemonicParsing="false" onAction="#delW" text="Usuń" />
+                                          <Text layoutX="66.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Podaj id do usunięcia" />
+                                          <ComboBox fx:id="choiceDelW" layoutX="66.0" layoutY="58.0" prefWidth="150.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </TabPane>
+   </children>
+</VBox>
